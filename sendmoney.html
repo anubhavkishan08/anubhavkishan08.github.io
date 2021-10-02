@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Send Money</title>
+  <link rel="stylesheet" href="register_style.css">
+</head>
+<body>
+ <div id="Registration">
+  <h1>Send Money to Account</h1>
+  <br><br><br>
+<div class="form">
+   Name:<input type="text"  id="fname" placeholder="Enter Your 
+    Name"><br><br>
+ 
+  Pin:<input type="text"  id="password" placeholder="Enter Your Pin"><br><br>
+
+  Mobile Number:<input type="text"  id="mobno" placeholder="Enter Your Mobile Number"><br><br>
+  Account Number:<input type="text"  id="acno" placeholder="Enter Your A/C Number"><br><br>
+    Amount:<input type="text"  id="amt" placeholder="Enter the Amount"><br><br>
+  
+  <button onclick="RegisterUser()">Send Money</button>
+  <button onclick="Canel()">Cancel</button>
+  
+</div>
+ </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+   apiKey: "AIzaSyCq2F98iizn4PFyK_xrmssqy3ZwKANMb5k",
+  authDomain: "banking-project-ad6eb.firebaseapp.com",
+  databaseURL: "https://banking-project-ad6eb-default-rtdb.firebaseio.com",
+  projectId: "banking-project-ad6eb",
+  storageBucket: "banking-project-ad6eb.appspot.com",
+  messagingSenderId: "691822906738",
+  appId: "1:691822906738:web:cae7292f2f5d3dc24f61eb",
+  measurementId: "G-4993444G8P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ 
+</script>
+<script src="sendmoney.js"></script>
+</body>
+</html>

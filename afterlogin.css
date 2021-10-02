@@ -1,0 +1,16 @@
+ head {
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+}
+	#logo{ 
+	position:fixed; 
+	top:0; 
+	left:0; 
+}
+
+body
+{
+	 background: url("image.jpeg");
+}
+ 

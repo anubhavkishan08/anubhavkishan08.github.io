@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Transcation page</title>
+  <link rel="stylesheet" href="register_style.css">
+</head>
+<body>
+    <h1>Transcation Details</h1>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <body>
+        <table>
+            <thead>
+                <th>Name</th>
+                 <th>Pin</th>
+                  <th>Mobile Number</th>
+                   <th>Account Number</th>
+                    <th>Amount</th>
+            </thead>
+            <tbody id="tbody1">
+                
+            </tbody>
+        </table>
+    </body>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+   apiKey: "AIzaSyCq2F98iizn4PFyK_xrmssqy3ZwKANMb5k",
+  authDomain: "banking-project-ad6eb.firebaseapp.com",
+  databaseURL: "https://banking-project-ad6eb-default-rtdb.firebaseio.com",
+  projectId: "banking-project-ad6eb",
+  storageBucket: "banking-project-ad6eb.appspot.com",
+  messagingSenderId: "691822906738",
+  appId: "1:691822906738:web:cae7292f2f5d3dc24f61eb",
+  measurementId: "G-4993444G8P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+function SelectAllData(){
+    firebase.database().ref('Transcation Details').once('value',
+        function(AllRecords){
+            AllRecords.forEach(
+                function(CurrentRecord){
+                    var name= CurrentRecord.val().
+                })
+        })
+}
+
+
+
+  </script>
+<script src="transcation.js"></script>
+
+</body>
+</html>

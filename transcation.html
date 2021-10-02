@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Transcation page</title>
+  <link rel="stylesheet" href="transcation.css">
+</head>
+<body>
+    <h1>Transcation Details</h1>
+<div id="root" class="transcation">
+
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+   apiKey: "AIzaSyCq2F98iizn4PFyK_xrmssqy3ZwKANMb5k",
+  authDomain: "banking-project-ad6eb.firebaseapp.com",
+  databaseURL: "https://banking-project-ad6eb-default-rtdb.firebaseio.com",
+  projectId: "banking-project-ad6eb",
+  storageBucket: "banking-project-ad6eb.appspot.com",
+  messagingSenderId: "691822906738",
+  appId: "1:691822906738:web:cae7292f2f5d3dc24f61eb",
+  measurementId: "G-4993444G8P"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var firebaseRef=firebase.database().ref("Transcation Details");
+  firebaseRef.on("value", function(snapshot){
+   
+   snapshot.forEach(function(element){
+    document.querySelector('#root').innerHTML +=`
+         <div>${element.val()} </div>
+    `
+   });
+  })
+ 
+</script>
+<script src="transcation.js"></script>
+<button onClick="parent.location='newlogin.html'"style.display='block'" class="w3-button w3-grey"">Logout</button>
+</body>
+</html>
